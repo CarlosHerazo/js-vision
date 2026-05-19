@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>J'S VISION — Javier Julio</title>
+  <meta name="description" content="Portfolio cinematográfico de Javier Julio (JOTAS). Comunicador audiovisual, director, realizador y actor. Cortometrajes, videoclips y storytelling visual con identidad cinematográfica." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&family=Bebas+Neue&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Lenis -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- Grain overlay -->
+  <div class="grain"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <a href="#hero" class="nav-logo-link">
+      <img src="assets/logo_blanco.png" alt="J's Vision" class="nav-logo-img" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about" class="nav-link">Sobre mí</a></li>
+      <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+      <li><a href="#services" class="nav-link">Servicios</a></li>
+      <li><a href="#contact" class="nav-link">Contacto</a></li>
+    </ul>
+    <button class="nav-cta" onclick="scrollToContact()">Agendar Proyecto</button>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <img src="assets/logo_blanco.png" alt="J's Vision" class="mobile-menu-logo" />
+    <ul>
+      <li><a href="#about" class="mobile-link">Sobre mí</a></li>
+      <li><a href="#portfolio" class="mobile-link">Portfolio</a></li>
+      <li><a href="#services" class="mobile-link">Servicios</a></li>
+      <li><a href="#contact" class="mobile-link">Contacto</a></li>
+    </ul>
+    <a href="assets/javier_julio_portafolio.pdf" target="_blank" class="mobile-pdf-link">Ver Portafolio PDF →</a>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- 1. HERO SECTION -->
+  <!-- ═══════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-video-wrap">
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source src="assets/hero-loop.mp4" type="video/mp4" />
+      </video>
+      <!-- Fallback cinematic gradient when no video -->
+      <div class="hero-video-fallback"></div>
+    </div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow" data-reveal>Comunicador Audiovisual · Realizador · Actor</p>
+      <h1 class="hero-title" data-reveal>
+        <span class="hero-title-line">J'S</span>
+        <span class="hero-title-line italic">Vision</span>
+      </h1>
+      <p class="hero-sub" data-reveal>Cortometrajes, videoclips y storytelling visual<br>con identidad cinematográfica.</p>
+      <div class="hero-ctas" data-reveal>
+        <a href="#portfolio" class="btn btn-primary">Ver Portfolio</a>
+        <a href="assets/javier_julio_portafolio.pdf" target="_blank" class="btn btn-ghost">Descargar CV</a>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- 2. SOBRE MÍ -->
+  <!-- ═══════════════════════════════════════ -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <div class="about-image-wrap">
+        <div class="about-image-frame">
+          <img src="assets/portrait.jpg" alt="JOTAS — Director" class="about-image" />
+          <div class="about-image-overlay"></div>
+        </div>
+        <div class="about-image-label">© Javier Julio 2026</div>
+      </div>
+
+      <div class="about-content">
+        <span class="section-label">— Sobre mí</span>
+        <h2 class="about-title">
+
+        </h2>
+        <div class="about-text">
+          <p>Soy un creador audiovisual con enfoque en la narrativa cinematográfica y la estética visual. Mi pasión radica en transformar emociones y experiencias cotidianas en historias que trasciendan la pantalla y conecten genuinamente con el público.</p>
+          <p>Con experiencia tanto frente como detrás de cámara, me desempeño en dirección, producción de contenido y actuación — aportando una mirada integral al proceso creativo.</p>
+          <p>Me caracterizo por mi capacidad de adaptación, mi compromiso con la excelencia y una disposición natural para el trabajo colaborativo en proyectos audiovisuales de <em>alto impacto</em>.</p>
+        </div>
+
+        <div class="about-tools">
+          <span class="tools-label">Herramientas</span>
+          <div class="tools-list">
+            <span>Premiere Pro</span>
+            <span>After Effects</span>
+            <span>Lightroom</span>
+            <span>Photoshop</span>
+          </div>
+        </div>
+
+        <div class="about-stats">
+          <div class="stat">
+            <span class="stat-num">4+</span>
+            <span class="stat-label">Años</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">2</span>
+            <span class="stat-label">Roles</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">∞</span>
+            <span class="stat-label">Visión</span>
+          </div>
+        </div>
+
+        <a href="assets/javier_julio_portafolio.pdf" target="_blank" class="btn btn-ghost about-pdf-btn">
+          Ver Portafolio Completo →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- 3. PORTFOLIO -->
+  <!-- ═══════════════════════════════════════ -->
+  <section class="portfolio" id="portfolio">
+    <div class="section-header">
+      <span class="section-label">— Portfolio</span>
+      <h2 class="section-title">Obras</h2>
+    </div>
+
+    <div class="portfolio-filters">
+      <button class="filter-btn active" data-filter="all">Todo</button>
+      <button class="filter-btn" data-filter="cortometraje">Cortometrajes</button>
+      <button class="filter-btn" data-filter="videoclip">Videoclips</button>
+      <button class="filter-btn" data-filter="marca">Reels Marcas</button>
+      <button class="filter-btn" data-filter="lifestyle">Lifestyle</button>
+    </div>
+
+    <div class="portfolio-grid" id="portfolioGrid">
+
+      <article class="portfolio-item" data-category="cortometraje" data-index="0">
+        <div class="portfolio-thumb">
+          <div class="portfolio-thumb-img" style="background: linear-gradient(135deg, #1a0a0a 0%, #3d1520 50%, #0a0a0a 100%)"></div>
+          <div class="portfolio-hover-overlay">
+            <div class="portfolio-play">▶</div>
+          </div>
+        </div>
+        <div class="portfolio-info">
+          <h3 class="portfolio-title">Sin Título #01</h3>
+          <div class="portfolio-meta">
+            <span class="portfolio-type">Cortometraje</span>
+            <span class="portfolio-year">2024</span>
+          </div>
+          <p class="portfolio-mood">Melancolía · Silencio · Redención</p>
+        </div>
+      </article>
+
+      <article class="portfolio-item" data-category="videoclip" data-index="1">
+        <div class="portfolio-thumb">
+          <div class="portfolio-thumb-img" style="background: linear-gradient(135deg, #0a0a1a 0%, #15203d 50%, #0a0a0a 100%)"></div>
+          <div class="portfolio-hover-overlay">
+            <div class="portfolio-play">▶</div>
+          </div>
+        </div>
+        <div class="portfolio-info">
+          <h3 class="portfolio-title">Noche Infinita</h3>
+          <div class="portfolio-meta">
+            <span class="portfolio-type">Videoclip</span>
+            <span class="portfolio-year">2024</span>
+          </div>
+          <p class="portfolio-mood">Euforia · Oscuridad · Liberación</p>
+        </div>
+      </article>
+
+      <article class="portfolio-item" data-category="marca" data-index="2">
+        <div class="portfolio-thumb">
+          <div class="portfolio-thumb-img" style="background: linear-gradient(135deg, #0f0a0a 0%, #2d1a0e 50%, #0a0a0a 100%)"></div>
+          <div class="portfolio-hover-overlay">
+            <div class="portfolio-play">▶</div>
+          </div>
+        </div>
+        <div class="portfolio-info">
+          <h3 class="portfolio-title">Brand Story — Unnamed</h3>
+          <div class="portfolio-meta">
+            <span class="portfolio-type">Reel Marca</span>
+            <span class="portfolio-year">2024</span>
+          </div>
+          <p class="portfolio-mood">Elegancia · Identidad · Poder</p>
+        </div>
+      </article>
+
+      <article class="portfolio-item" data-category="lifestyle" data-index="3">
+        <div class="portfolio-thumb">
+          <div class="portfolio-thumb-img" style="background: linear-gradient(135deg, #0a0f0a 0%, #0e2d15 50%, #0a0a0a 100%)"></div>
+          <div class="portfolio-hover-overlay">
+            <div class="portfolio-play">▶</div>
+          </div>
+        </div>
+        <div class="portfolio-info">
+          <h3 class="portfolio-title">Editorial Urbano</h3>
+          <div class="portfolio-meta">
+            <span class="portfolio-type">Lifestyle</span>
+            <span class="portfolio-year">2023</span>
+          </div>
+          <p class="portfolio-mood">Ciudad · Movimiento · Textura</p>
+        </div>
+      </article>
+
+      <article class="portfolio-item" data-category="cortometraje" data-index="4">
+        <div class="portfolio-thumb">
+          <div class="portfolio-thumb-img" style="background: linear-gradient(135deg, #1a0f0a 0%, #3d2015 50%, #0a0a0a 100%)"></div>
+          <div class="portfolio-hover-overlay">
+            <div class="portfolio-play">▶</div>
+          </div>
+        </div>
+        <div class="portfolio-info">
+          <h3 class="portfolio-title">Umbral</h3>
+          <div class="portfolio-meta">
+            <span class="portfolio-type">Cortometraje</span>
+            <span class="portfolio-year">2023</span>
+          </div>
+          <p class="portfolio-mood">Dualidad · Sombra · Identidad</p>
+        </div>
+      </article>
+
+      <article class="portfolio-item" data-category="videoclip" data-index="5">
+        <div class="portfolio-thumb">
+          <div class="portfolio-thumb-img" style="background: linear-gradient(135deg, #0f0a1a 0%, #20153d 50%, #0a0a0a 100%)"></div>
+          <div class="portfolio-hover-overlay">
+            <div class="portfolio-play">▶</div>
+          </div>
+        </div>
+        <div class="portfolio-info">
+          <h3 class="portfolio-title">Fuego Frío</h3>
+          <div class="portfolio-meta">
+            <span class="portfolio-type">Videoclip</span>
+            <span class="portfolio-year">2023</span>
+          </div>
+          <p class="portfolio-mood">Pasión · Contraste · Arte</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Modal Portfolio -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div class="modal-video-wrap">
+        <div class="modal-video-placeholder">
+          <div class="modal-play-icon">▶</div>
+          <p>Video próximamente</p>
+        </div>
+      </div>
+      <div class="modal-info">
+        <span class="modal-type" id="modalType"></span>
+        <h2 class="modal-title" id="modalTitle"></h2>
+        <p class="modal-mood" id="modalMood"></p>
+        <p class="modal-desc" id="modalDesc">Una pieza audiovisual construida desde la emoción. Cada encuadre diseñado con intención narrativa, cada corte con ritmo cinematográfico.</p>
+        <div class="modal-credits">
+          <span>Dirección · Javier Julio</span>
+          <span>Fotografía · Javier Julio</span>
+          <span>Edición · Javier Julio</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- 4. SERVICIOS -->
+  <!-- ═══════════════════════════════════════ -->
+  <section class="services" id="services">
+    <div class="section-header">
+      <span class="section-label">— Servicios</span>
+      <h2 class="section-title">Lo que hago</h2>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon">🎬</div>
+        <h3 class="service-title">Dirección Cinematográfica</h3>
+        <p class="service-desc">Narrativa visual con identidad artística. Cada proyecto es un universo propio con su atmósfera y lenguaje visual único.</p>
+        <div class="service-line"></div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🎞</div>
+        <h3 class="service-title">Producción Audiovisual</h3>
+        <p class="service-desc">Desde la preproducción hasta la entrega final. Control total del proceso creativo con estándares de cine profesional.</p>
+        <div class="service-line"></div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">📱</div>
+        <h3 class="service-title">Reels para Marcas</h3>
+        <p class="service-desc">Contenido premium que eleva la identidad de tu marca. Estética cinematográfica aplicada a la comunicación comercial.</p>
+        <div class="service-line"></div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🎵</div>
+        <h3 class="service-title">Videoclips</h3>
+        <p class="service-desc">Visualmente narrativos. Creación de universos visuales que amplifican la música y construyen la identidad del artista.</p>
+        <div class="service-line"></div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">✦</div>
+        <h3 class="service-title">Storytelling Visual</h3>
+        <p class="service-desc">El arte de contar historias sin palabras. Composición, luz y movimiento al servicio de la emoción pura.</p>
+        <div class="service-line"></div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">◈</div>
+        <h3 class="service-title">Lifestyle Premium</h3>
+        <p class="service-desc">Contenido de estilo de vida con producción editorial de alto nivel. Estética que comunica exclusividad y autenticidad.</p>
+        <div class="service-line"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- 5. REDES SOCIALES -->
+  <!-- ═══════════════════════════════════════ -->
+  <section class="social" id="social">
+    <div class="social-inner">
+      <span class="section-label">— Sígueme</span>
+      <h2 class="social-title">Universo<br><em>Visual</em></h2>
+      <p class="social-sub">Contenido cinematográfico en tiempo real.<br>El proceso detrás de la estética.</p>
+
+      <div class="social-buttons">
+        <a href="https://instagram.com/iamjotas__" target="_blank" rel="noopener" class="social-btn social-instagram">
+          <div class="social-btn-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </div>
+          <div class="social-btn-text">
+            <span class="social-platform">Instagram</span>
+            <span class="social-handle">@iamjotas__</span>
+          </div>
+          <div class="social-btn-arrow">→</div>
+        </a>
+
+        <a href="https://tiktok.com/@iamjotas__" target="_blank" rel="noopener" class="social-btn social-tiktok">
+          <div class="social-btn-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.79 1.52V6.75a4.85 4.85 0 01-1.02-.06z"/></svg>
+          </div>
+          <div class="social-btn-text">
+            <span class="social-platform">TikTok</span>
+            <span class="social-handle">@iamjotas__</span>
+          </div>
+          <div class="social-btn-arrow">→</div>
+        </a>
+
+        <a href="#" class="social-btn social-youtube soon">
+          <div class="social-btn-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+          </div>
+          <div class="social-btn-text">
+            <span class="social-platform">YouTube</span>
+            <span class="social-handle">Próximamente</span>
+          </div>
+          <div class="social-soon-badge">Pronto</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- 6. CONTACTO -->
+  <!-- ═══════════════════════════════════════ -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <div class="contact-left">
+        <span class="section-label">— Contacto</span>
+        <h2 class="contact-title">
+          Cada proyecto<br>
+          merece una<br>
+          <em>narrativa visual</em><br>
+          única.
+        </h2>
+        <p class="contact-sub">¿Tienes una idea? Hagámosla realidad juntos. Cuéntame tu visión y construimos algo extraordinario.</p>
+        <div class="contact-info">
+          <a href="mailto:Javiereduardojulio10@gmail.com" class="contact-email">Javiereduardojulio10@gmail.com</a>
+        </div>
+      </div>
+
+      <div class="contact-right">
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label class="form-label">Tu nombre</label>
+            <input type="text" class="form-input" placeholder="¿Cómo te llamas?" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-input" placeholder="tu@email.com" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Tipo de proyecto</label>
+            <select class="form-input form-select">
+              <option value="">Selecciona un servicio</option>
+              <option>Dirección Cinematográfica</option>
+              <option>Reel para Marca</option>
+              <option>Videoclip</option>
+              <option>Cortometraje</option>
+              <option>Contenido Lifestyle</option>
+              <option>Otro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Tu visión</label>
+            <textarea class="form-input form-textarea" placeholder="Cuéntame sobre tu proyecto..." rows="4"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Hablemos</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- 7. FOOTER -->
+  <!-- ═══════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <img src="assets/logo_blanco.png" alt="J's Vision" class="footer-logo-img" />
+      <div class="footer-social">
+        <a href="https://instagram.com/iamjotas__" target="_blank" rel="noopener">IG</a>
+        <a href="https://tiktok.com/@iamjotas_" target="_blank" rel="noopener">TK</a>
+        <a href="assets/javier_julio_portafolio.pdf" target="_blank">PDF</a>
+      </div>
+      <p class="footer-copy">© 2026 Javier Julio — J's Vision · Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
