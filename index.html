@@ -7,7 +7,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet" />
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 
@@ -63,9 +63,9 @@
     .hero-photo {
       position: absolute;
       inset: 0;
-      background-image: url('assets/hero.jpeg');
+      background-image: url('assets/hero2.png');
       background-size: cover;
-      background-position: center 25%;
+      background-position: center 40%;
       transform: scale(1.04);
       transition: transform 8s ease-out;
     }
@@ -96,36 +96,27 @@
       text-align: center;
     }
 
-    .hero-logo-corner {
-      position: absolute;
-      top: -20px;
-      left: 0;
-      z-index: 10;
-      height: 200px;
-      width: auto;
-      object-fit: contain;
-      opacity: 0;
-    }
-
     .hero-title {
-      font-family: 'Libre Baskerville', serif;
+      font-family: 'Bebas Neue', sans-serif;
       line-height: 1;
       margin-bottom: 1.2rem;
       overflow: hidden;
     }
     .hero-title .line1 {
       display: block;
-      font-size: clamp(4rem, 14vw, 9rem);
-      margin-bottom: 30px;
-      font-weight: 700;
+      font-size: clamp(5rem, 18vw, 11rem);
+      margin-bottom: 10px;
+      font-weight: 400;
+      letter-spacing: 0.06em;
       color: var(--white);
       opacity: 0;
       transform: translateY(40px);
     }
     .hero-title .line2 {
       display: block;
-      font-size: clamp(3.5rem, 13vw, 8rem);
+      font-size: clamp(5rem, 18vw, 11rem);
       font-weight: 400;
+      letter-spacing: 0.06em;
       color: var(--wine);
       opacity: 0;
       transform: translateY(40px);
@@ -147,6 +138,15 @@
       background: var(--black);
       padding: 6rem 1.5rem 5rem;
       text-align: center;
+    }
+
+    .about-logo {
+      height: 20rem;
+      width: auto;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto 2.5rem;
+      opacity: 0.9;
     }
 
     .about-eyebrow {
@@ -359,12 +359,10 @@
     <div class="hero-photo" id="heroPhoto"></div>
     <div class="hero-gradient"></div>
 
-    <img src="assets/logo_negro.png" alt="J's Vision" class="hero-logo-corner" id="heroLogo" />
-
     <div class="hero-content">
       <h1 class="hero-title">
-        <span class="line1" id="line1">J'S</span>
-        <span class="line2" id="line2">Vision</span>
+        <span class="line1" id="line1">Javier</span>
+        <span class="line2" id="line2">Julio</span>
       </h1>
 
       <p class="hero-sub" id="heroSub">Comunicador Audiovisual · Realizador · Actor</p>
@@ -375,6 +373,7 @@
        SOBRE MÍ
   ══════════════════════════════ -->
   <section class="about-section" id="aboutSection">
+    <img src="assets/logo_blanco.png" alt="J's Vision" class="about-logo" />
     <span class="about-eyebrow"></span>
     <h2 class="about-heading">
       <em>— Sobre mí</em> 
@@ -468,10 +467,8 @@
     gsap.set(['#line1', '#line2', '#heroSub'], { opacity: 0 });
     gsap.set(['#line1', '#line2'], { y: 40 });
     gsap.set('#heroSub', { y: 16 });
-    gsap.set('#heroLogo', { opacity: 0, x: -12 });
 
-    tl.to('#heroLogo', { opacity: 1, x: 0, duration: 1, ease: 'power3.out' })
-      .to('#line1',   { opacity: 1, y: 0, duration: 1.1, ease: 'power4.out' }, '-=0.5')
+    tl.to('#line1',   { opacity: 1, y: 0, duration: 1.1, ease: 'power4.out' })
       .to('#line2',   { opacity: 1, y: 0, duration: 1.1, ease: 'power4.out' }, '-=0.85')
       .to('#heroSub', { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }, '-=0.5');
 
